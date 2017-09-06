@@ -64,6 +64,9 @@ var Grid = React.createClass({
     // Populated later.
     var className = []
 
+    if(this.props.className)
+      className = this.props.className.split(' ')
+
     /*
       ===================
       PARENT CLASS NAMES.

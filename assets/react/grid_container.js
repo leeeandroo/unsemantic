@@ -15,11 +15,19 @@ var GridContainer = React.createClass({
 
   // Render method.
   render: function () {
+    var className = []
+
+    if(this.props.className)
+      className = this.props.className.split(' ')
+
+    className.push('grid-container')
+    className = className.join(' ')
+
     // Expose UI.
     return React.createElement(
       'div',
       {
-        className: 'grid-container'
+        className: className
       },
       this.props.children
     )
